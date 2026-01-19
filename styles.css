@@ -1,0 +1,51 @@
+body{
+    width:880px;
+    margin:0;
+    padding:0;
+}
+header{
+    width:880px;
+    height: 100px;
+    background-color: orange;
+}
+
+header div{
+    width:80px;
+    float:left;
+    height:auto;
+    flex-grow: 0;
+}
+
+/*coge el 100% del contenedor(div)*/
+img{
+    width:100%;
+}
+
+nav{
+    width:800px;
+    display:inline-block; /* Se usa para que el nav se coloque junto al elemento flotado, respetando su ancho, ya que el float saca al elemento del flujo normal */ 
+}
+
+ul{
+    display:flex; /*Hacemos flex el ul, que es la caja que contiene las cajas flexibles*/
+    margin:0; /*Le quitamos margin y padding por defecto*/
+    padding:0;
+    line-height:100px; /*lo alineamos verticalmente*/
+}
+
+li{
+    flex-basis:150px; /*Ponemos que las cajas flexibles van a tener 150px de flex basis(ancho)*/
+    display:inline-block;
+    list-style-type: none;
+    flex-grow:1; /*ponemos que todas las cajas crezcan 1 proporcionalmente sobre el ancho restante */
+    flex-shrink: 3; /*ponemos que todas las cajas disminuyan 3 proporcionalmente sobre el ancho restante */
+    text-align: center;
+    background-color:aqua;
+    margin-left: 20px;
+}
+
+#iniciarSesion{
+    flex-grow:2; /*En proporción, crece más la caja de inicio de sesión que el resto de cajas del nav*/
+    flex-shrink: 1;/*Esta caja disminuirá menos que el resto de cajas, quedando más grande que el resto de cajas*/
+    margin-right: 20px;
+}
